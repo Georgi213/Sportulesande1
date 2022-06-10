@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="masterautod.View.Otsimanija"
+             Title="Отжимания">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Отжимания" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Image Source="otsim.gif" IsAnimationPlaying="true"/>
+                <Label Text="Примите упор лежа (лягте лицом вниз на пол, руки поставьте чуть шире плеч). Придайте телу правильную позу для отжиманий от пола ‒ форму прямой линии." TextColor="Black" FontSize="Small"
+                     VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                       MaxLines="5" BackgroundColor="RosyBrown"/>
+                <Label Text="Плечи должны быть немного выше уровня таза. Голова должна смотреть в пол."></Label>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{Binding StopWatchHours}" FontSize="25"/>
+                    <Label x:Name="lbl1" Text=":" Opacity="0" FontSize="25"/>
+                    <Label Text="{Binding StopWatchMinutes}" FontSize="25"/>
+                    <Label x:Name="lbl2" Text=":" Opacity="0" FontSize="25"/>
+                    <Label Text="{Binding StopWatchSeconds}" FontSize="25"/>
+                </StackLayout>
+                <Button x:Name="startTimer" Text="Запустить таймер" Clicked="startTimer_Clicked" BackgroundColor="YellowGreen"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

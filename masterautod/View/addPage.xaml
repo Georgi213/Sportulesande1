@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="masterautod.View.addPage"
+             Title="Вода">
+    <StackLayout BackgroundColor="LightSalmon">
+        <Label Text="День" />
+        <DatePicker x:Name="date" Format="D" Date="{Binding Day}"/>
+        <Label Text="Количество выпитой воды" />
+        <Label x:Name="sliderTxt" FontSize="Large" />
+        <Slider x:Name="Slider" Minimum="0" Maximum="5" Value="{Binding waterValue}" ValueChanged ="Slider_ValueChanged"
+            MinimumTrackColor="Red" MaximumTrackColor="Gray" ThumbColor="Red" />
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="save" Text="Сохранить" Clicked="save_Clicked" BackgroundColor="Pink" />
+            <Button x:Name="delete" Text="Удалить" Clicked="delete_Clicked" BackgroundColor="Pink"/>
+            <Button x:Name="cancel" Text="Отмена" Clicked="cancel_Clicked" BackgroundColor="Pink"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

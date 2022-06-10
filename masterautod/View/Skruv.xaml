@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="masterautod.View.Skruv"
+             Title="Скручивание">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Label Text="Скручивание" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Image Source="skru.gif" IsAnimationPlaying="true"/>
+                <Label Text="Ложитесь на пол и согните ноги под углом 90 градусов.
+                Скрестите руки на груди или заложите их за голову, не переплетая пальцы между собой.
+                Медленно, за счёт напряжения мышц живота оторвите плечи от пола на несколько сантиметров.
+                Плавно опуститесь в исходное положение и повторите упражнение."/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{Binding StopWatchHours}" FontSize="24"/>
+                    <Label x:Name="lbl1" Text=":" Opacity="0" FontSize="24"/>
+                    <Label Text="{Binding StopWatchMinutes}" FontSize="24"/>
+                    <Label x:Name="lbl2" Text=":" Opacity="0" FontSize="24"/>
+                    <Label Text="{Binding StopWatchSeconds}" FontSize="24"/>
+                </StackLayout>
+                <Button x:Name="startTimer" Text="Запустить таймер" Clicked="startTimer_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

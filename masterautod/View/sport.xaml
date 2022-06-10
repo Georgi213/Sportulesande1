@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="masterautod.View.sport"
+             Title="Sport">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightBlue">
+            <Label Text="Добро пожаловать в мое мобильное приложение! В нем ты найдешь разные упражнения для тренировок." HorizontalTextAlignment="Center" BackgroundColor="LightYellow" FontSize="Body" TextColor="Black"/>
+            <Label Text="Тренировки и упражнения способствуют улучшенному кровообращению, в том числе в самых мелких капиллярах. Кислород поступает к самым отдаленным участкам тела, где возникает застой у людей, ведущих малоподвижный образ жизни. Регулярные занятия спортом придают тонус мышечной ткани, делают ее более выносливой, крепкой"></Label>
+            <Image Source="zal.png" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

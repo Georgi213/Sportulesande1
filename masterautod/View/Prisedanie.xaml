@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="masterautod.View.Prisedanie"
+             Title="Приседания">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Label Text="Приседания" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Image Source="pri.gif" IsAnimationPlaying="true"/>
+                <Label Text="Встаньте прямо, ноги чуть шире ширины плеч.
+                 Опустите плечи и отведите их назад. Округлённая спина вам тут не нужна — в противном случае вы перегрузите поясницу. На протяжении всего упражнения важно сохранять прямую осанку.
+                 У рук может быть несколько положений. Первое — они вытянуты вперёд, ладони направлены вниз. Второе — согнуты в локтях и прижаты к туловищу, большие пальцы «смотрят» вверх. Третье — сложены за голову, локти в стороны. Четвёртое — в замке перед собой. Пятое — ладони лежат на талии."/>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="{Binding StopWatchHours}" FontSize="24"/>
+                    <Label x:Name="lbl1" Text=":" Opacity="0" FontSize="24"/>
+                    <Label Text="{Binding StopWatchMinutes}" FontSize="24"/>
+                    <Label x:Name="lbl2" Text=":" Opacity="0" FontSize="24"/>
+                    <Label Text="{Binding StopWatchSeconds}" FontSize="24"/>
+                </StackLayout>
+                <Button x:Name="startTimer" Text="Запустить таймер" Clicked="startTimer_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
